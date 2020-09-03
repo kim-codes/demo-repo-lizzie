@@ -16,6 +16,12 @@
     </div>
   </body>
   <script>
+      (async function () {
+          let response = await fetch(`api/message`);
+          let message = await response.json();
 
+          document.querySelector("#hiddenMsg").innerHTML = message.text
+      })();
+  </script>      
   </script>
   </html>
